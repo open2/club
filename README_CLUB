@@ -1,0 +1,26 @@
+설치방법 :
+
+gnuboard4 디렉토리 하위에 설치하는 것을 기준으로 설명합니다. (gnuboard4/club) 
+
+
+클럽 압축파일을 다운받아 gnuboard4 디렉토리에 압축을 해제합니다. 
+또는 자신의 PC에서 압축을 해제한후 파일들을 FTP등을 통하여 gnuboard4 로 업로드 합니다. 
+club/* -> /gnuboard4/club/ 디렉토리에 
+skin/* -> /gnuboard4/skin/ 디렉토리에 
+
+club 디렉토리의 권한을 707(권장)로 설정합니다. 
+예) ]# chmod 707 gnuboard4/club 
+
+
+g4 관리자로 로그인후 웹브라우져상에서 클럽에 접속합니다. (신규설치) 
+예) http://도메인/gnuboard4/club/install/install.php 
+
+club 디렉토리의 권한을 705로 다시 변경합니다 (보안을 위해서) 
+예) ]# chmod 705 gnuboard4/club 
+
+설치를 진행한후 설치가 완료되면 
+클럽관리자 페이지에서 자신의 환경에 알맞게 설정후 운영합니다. 
+
+--- 
+기존에 설치된 클럽을 삭제하고 신규로 설치를 하기 위해서는 
+/gnuboard4/club/install_dir 디렉토리를 삭제하고, nc_config 테이블을 비우면 됩니다.

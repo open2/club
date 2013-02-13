@@ -1,0 +1,10 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr><td width valign=top><?=cb_latest(club_story,커버스토리 , 1, 50);?></td> 
+</tr>
+<tr><td height="10"></td></tr>
+<tr><td width valign=top><?=cb_latest(default_all, , 18,30);?></td> 
+</tr>
+<tr><td height="10"></td></tr>
+<tr><td width valign=top><?=cb_latest(club_gallery,갤러리, 6, 6);?></td> 
+</tr>
+</table>

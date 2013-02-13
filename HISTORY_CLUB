@@ -1,0 +1,945 @@
+2.2.5 pl8 (2010년.6월.24일)
+
+club/club_main.head.php
+ 
+ 
+- 클럽방문 횟수 업데이트 안되는 오류 (강나루님)
+club/club_main.head.php
+
+
+2.2.5 pl7 (2010년.6월.3일)
+
+club/install/install1.php 
+
+lib/latest.club.lib.php 
+
+skin/board/club/view.skin.php 
+
+
+
+- 게시글 보기에서 ip가 출력 안되게 (클럽 관리자라고 해도 ip를 보면 안됩니다) 
+skin/board/club/view.skin.php 
+
+- 설치오류 수정 (utf-8) 
+club/install/install1.php 
+
+- 그누보드 main에서 클럽목록 불러 쓸 수 있는 예제 추가 
+lib/latest.club.lib.php
+
+
+2.2.5 pl6 (may.10. 2010)
+
+club/cm_unlist.php 
+
+club/include/cb_managermenu.inc.php 
+
+club/install/install.php 
+club/install/install_clear.php 
+
+club/skin/outlogin/club/outlogin.skin.2.php 
+club/skin/outlogin/defauly/outlogin.skin.2.php 
+
+skin/board/club/list.skin.php 
+skin/board/club/view.skin.php 
+
+club/club.lib.php (삭제) 
+
+
+
+- 게시판 목록보기에서 reply icon이 깨지는 오류 
+skin/board/club/list.skin.php 
+
+- 불필요 파일 삭제 (위치변경) 
+club/install/install.php 
+club/install/install_clear.php 
+
+club/club.lib.php (삭제) 
+
+- 로그인스킨 주소오류 
+club/skin/outlogin/club/outlogin.skin.2.php 
+club/skin/outlogin/defauly/outlogin.skin.2.php 
+
+- 메뉴에 안달린 게시글 (관리자메뉴) 
+club/cm_unlist.php 
+club/include/cb_managermenu.inc.php 
+
+- 권한없는 게시글 읽기후 목록으로 돌아가기 (실눈이님) 
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=2140 
+skin/board/club/view.skin.php
+
+
+2.2.4 pl5 (april.25. 2010)
+
+ALTER TABLE `nc_config` CHANGE `nf_title` `nf_title` VARCHAR( 255 ) ; 
+
+--- 
+club/cb_myclub_list.php 
+
+club/admin/admin_upgrade.php 
+club/install/sql_club.sql 
+
+
+- title 자릿수 늘리기 (nf_title을 varchar 20 -> 255) 
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=2130 
+club/admin/admin_upgrade.php 
+club/install/sql_club.sql 
+
+- 프로그램 오류 
+club/cb_myclub_list.php
+
+
+2.2.4 pl4 (april.12. 2010)
+
+club/cm_menu.update.php 
+club/common.php 
+  
+club/bbs/register.php 
+  
+skin/board/club/delete.skin.php 
+skin/board/club/delete.tail.skin.php 
+skin/board/club/write.skin.php 
+  
+  
+- 삭제관련 프로그램 오류수정 
+skin/board/club/delete.skin.php 
+skin/board/club/delete.tail.skin.php 
+  
+- 회원가입 화면에서 로그인을 하면, 메인으로 연결되는 오류 
+club/bbs/register.php 
+  
+- typo 오류 (게시판 type 추가가 안됨) 
+club/common.php 
+  
+- 메뉴에 여백이 안되는 오류 
+club/cm_menu.update.php 
+  
+- firefox에서 분류 오류 
+skin/board/club/write.skin.php
+
+
+2.2.4 pl3 (april.05. 2010)
+
+메뉴에 특수문자가 들어가면 싹 없애버렸습니다. 편법입니다. ㅠ.ㅠ...
+ 
+post 하면서, java script로 체크하려고 했는데 안되더라구요.
+java script 잘하시는 분들, cm_menu.php의 482라인을 수정해주심 감솨...
+ 
+---
+ 
+/club/cb_secede.php
+/club/cm_default.php
+/club/cm_menu.php
+/club/cm_menu.update.php
+ 
+/club/lib/club.lib.php
+ 
+ 
+- 메뉴명에 특수문자가 들어갈 때의 오류
+/club/cm_menu.php
+/club/cm_menu.update.php
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=1995
+ 
+- 기본정보 좌측,하단 태그입력시 오류
+/club/cm_default.php
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=2011
+ 
+- 클럽 최신글 글자수 오류
+/club/lib/club.lib.php
+ 
+- 회원탈퇴시 클럽포인트 차감
+/club/cb_secede.php
+
+
+2.2.4 pl2 (march.30. 2010)
+
+2.2.4부터 안쓰는 필드 ::
+nc_club 테이블의 cb_latest_skin
+---
+ 
+club/admin/admin_category_list.php
+club/admin/admin_category_update.php
+ 
+club/cb_list.php
+club/cb_main.php
+club/cm_main.php
+club/cb_myclub_list.php
+club/cb_mb_join.update.php
+club/cb_open.update.php
+club/club_main.head.php
+ 
+club/lib/club.lib.php
+ 
+club/skin/search/default/cb_search.skin.php
+club/skin/search/default/cb_search_list.skin.php
+ 
+skin/board/club/view.skin.php
+skin/board/club/delete.tail.skin.php
+ 
+club/include/cb_list.inc.php (삭제)
+club/include/cb_search.inc.php (삭제)
+ 
+ 
+- 클럽메인의 클럽기본형 최신글에서 skin 반영
+club/cm_main.php
+club/cb_main.php
+club/cb_open.update.php
+ 
+- 관리자에서 상단 메뉴링크 오류
+club/skin_main/member/default/cb_club_top.skin.php
+
+- 마이클럽 오류 
+club/cb_list.php
+club/cb_myclub_list.php
+club/skin/search/default/cb_search_list.skin.php
+   
+ - 분류관리 선택수정오류 (한개만 수정됨)
+club/admin/admin_category_list.php
+club/admin/admin_category_update.php
+ 
+- 승인클럽 회원가입 레벨오류 
+club/cb_mb_join.update.php
+ 
+- 클럽검색 스킨화
+club/cb_list.php
+club/skin/search/default/cb_search.skin.php
+club/skin/search/default/cb_search_list.skin.php
+ 
+- (utf8) 보기에서 글 수정 들어갈 때, sca를 바르게
+club/lib/club.lib.php
+skin/board/club/view.skin.php
+ 
+- (utf8) 삭제후 카테고리를 못 찾는 오류
+club/lib/club.lib.php
+skin/board/club/delete.tail.skin.php
+ 
+- 클럽검색 결과값 오류
+club/cb_list.php
+ 
+- get_list 함수에서 불당팩과 타 경우를 분리
+club/lib/club.lib.php
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=1880
+ 
+- 메인글에서 클럽으로 이동할 때의 오류
+club/club_main.head.php
+
+
+2.2.4 pl1 (march.24. 2010)
+
+2.2.4 처음 release 이후 배포과정의 실수가 있었고, 
+누락된 오류처리도 조금 추가되었습니다. 
+
+2.2.4를 받으신 분들은 아래의 파일을 업데이트 하면 됩니다. 
+
+club/_error.php 
+club/cm_design.php 
+club/include/cb_top.inc.php 
+club/lib/club.lib.php 
+club/skin/latest/default_all/latest.skin.php 
+
+skin/board/club/_common.php 
+
+
+2.2.4 (march. 18. 2010)
+
+개선사항 
+
+. 디자인 개선 및 스킨 추가
+  whitefree님께서 스킨을 많이 추가하였습니다. 첫 화면부터 와~우~ 하실꺼에요. ㅎㅎ
+  
+. 일부호스팅에서 club_index.inc.php 파일을 차단하고 있어서 파일명을 변경했습니다. 
+  club_index.inc.php -> club_index_inc.php 
+
+. 클럽 상단 url을 이미지 일때도 보여줄 수 있게 했습니다. 
+  배경만 깔고 url link를 그대로 남기는 것을 원하는 경우도 있겠더라구요. 
+
+. 왼쪽/오른쪽 테이블 정렬이 안되는 문제... 결국은 테이블 1개로.. ㅠ..ㅠ.. 
+
+. 커버스토리와 공지사항을 클럽메인에서 랜덤하게 출력할 수 있게 햇습니다. 
+  개별클럽의 활성화에 나름 도움이 될 겁니다. 
+
+. utf-8에서 카테고리가 이상하게 먹히는거도 해결 했습니다. 
+  utf-8에서도 큰 문제가 이제는 없을 겁니다. 
+
+. utf-8에서 설치부터 문제 있는거 해결했습니다. 
+  sql 확장자가 utf-8 인코딩이 안되었더라구요. 
+
+. 클럽을 생성할 때, 초기 클럽화면의 html을 관리자가 지정해 줄 수 있습니다. 
+  이후에는 클럽2 사용자들이 공개하는 html을 클럽하우스 게시판에 올려서 공유하면 되요. 
+
+. 클럽게시글 검색을 클럽메뉴에 추가했습니다. 
+  좀 쌩뚱 맞아보이지만 메인에 안나오게 하는 경우 필요하더라구요. 
+
+. 한줄게시판 등의 추가가 가능하게 변경 
+  기본은 안됩니다 (되던거를 막아뒀었습니다). 
+  해당 디렉토리에 스킨을 올린 후, club.config.php에서 코멘트를 풀어주세요. 
+
+. 기타 여러가지 버그 및 오류를 수정했습니다. 
+
+--- 
+
+club/common.php 
+club/cb_open.update.php 
+club/club.config.php 
+club/club_index_inc.php 
+club/cm_design.php 
+club/cm_main.php 
+club/head.php 
+club/tail.php 
+club/club_index.inc.php (삭제) 
+
+club/admin/admin_config.php 
+club/admin/admin_config.update.php 
+club/admin/admin_upgrade.php 
+club/admin/club_admin.php 
+
+club/include/cb_bottom.inc.php 
+club/include/cb_top.inc.php 
+
+club/install/install1.php 
+club/install/club_main.txt 
+
+club/lib/club.lib.php 
+
+club/skin_main/member/default/cb_clubmenu.inc.php 
+
+club/skin/oneline/ 
+club/skin/1_to_1/ 
+club/skin/schedule/ 
+club/skin/mart/ 
+club/skin/pds/ 
+club/skin/link/ 
+club/skin/jisik/ 
+
+skin/board/club/_common.php 
+skin/board/club/list.skin.php 
+skin/board/club/view.skin.php 
+skin/board/club/write.skin.php 
+
+
+
+- 일부호스팅에서의 문제 해결 
+club/club_index_inc.php 
+club/club_index.inc.php (삭제) 
+
+- 테이블정렬 
+club/head.php 
+club/tail.php 
+club/admin/club_admin.php 
+club/include/cb_bottom.inc.php 
+
+- 클럽 메인상단의 url link 출력여부 
+club/cm_design.php 
+include/cb_top.inc.php 
+
+- 한줄게시판 등을 메뉴로 추가할 수 있게 
+club/club.config.php 
+club/common.php 
+
+- 랜덤커버스토리/랜덤공지사항 (메인화면) 
+club/lib/club.lib.php 
+club/club_index.inc.php 
+
+- 랜덤 커버스토리 (클럽 공지사항, 클럽 커버스토리 갯수를 db에 저장) 
+skin/board/club/write_update.skin.php 
+skin/board/club/delete.skin.php 
+skin/board/club/delete.tail.skin.php 
+
+- $stx에 값이 있을 때만, 검색목록 버튼이 나오게 
+skin/board/club/view.skin.php 
+
+- 비회원 글쓰기 불가능하게 
+skin/board/club/list.skin.php 
+skin/board/club/view.skin.php 
+
+- utf8 환경에서 카테고리 깨어짐 
+skin/board/club/_common.php 
+skin/board/club/list.skin.php 
+skin/board/club/write.skin.php 
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=1762 
+
+- 클럽 생성시 기본으로 html 을 메인에 추가 
+club/cb_open.update.php 
+club/admin/admin_config.php 
+club/admin/admin_config.update.php 
+
+- 스킨디렉토리 추가 (디렉토리만 추가...) 
+club/skin/oneline/ 
+club/skin/1_to_1/ 
+club/skin/schedule/ 
+club/skin/mart/ 
+club/skin/pds/ 
+club/skin/link/ 
+club/skin/jisik/ 
+
+- 업그레이드 메뉴 수정 
+club/admin/admin_upgrade.php 
+club/lib/club.lib.php 
+
+- 클럽게시글 검색을 첫화면 클럽메뉴에 추가 
+club/skin_main/member/default/cb_clubmenu.inc.php 
+
+- 검색스킨 설정오류 
+club/cm_main.php 
+club/admin/admin_config.php 
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=1699 
+
+- 이미지를 클럽 대문 상단에 올릴 때, 클럽주소 링크가 미리보기에 보이는거 
+club/cm_design.php
+
+
+2.2.3 (march. 18. 2010)
+
+클럽2 - 2.2.3부터 클럽2의 licnese에 디자인 관련해서 저작권자가 추가 되었습니다. 
+whitefree님이 클럽2의 디자인을 싹~~~~ 갈아서 리뉴얼 해주셨습니다.
+
+클럽2를 설치만으로 그냥 사용할 수 있을 정도의 수준으로 디자인 level-up이 되었기에 
+기존에 테스트만 하셨던 분들은 코드를 싹 지우고 새로운 것으로 물갈이 하시기 바랍니다. 
+
+아래에, 수정한 파일을 일부 기록하였으나, 실제로는 거의 대부분이 다 바뀌었습니다. 
+맘 편히 싹~ 지우도 다시 업로드 하시기 바랍니다. ㅠ..ㅠ... 
+
+db가 변경되었으므로 업그레이드도 해줘야 합니다. 
+
+--- 
+ALTER TABLE `nc_config` ADD `title_img_height` INT( 11 ) NOT NULL ; 
+UPDATE `nc_config` SET `title_img_height` = '70' ; 
+ALTER TABLE `nc_config` ADD `nf_maintext_html` TINYINT( 4 ) NOT NULL ; 
+ALTER TABLE `nc_club` ADD `cb_latest_text_html` TINYINT( 4 ) NOT NULL AFTER `cb_latest_text` ; 
+
+--- 
+/club/admin/admin_club_list.php 
+/club/admin/admin_club_list.update.php 
+/club/admin/admin_config.php 
+/club/admin/admin_config.update.php 
+/club/admin/admin_upgrade.php 
+
+/club/cb_open.php 
+/club/cb_mb_join.php 
+/club/cb_mb_join.update.php 
+/club/cm_design.php 
+/club/club_main.php 
+/club/cm_main.update.php 
+/club/cm_member_list.php 
+/club/cm_member_list.update.php 
+
+/club/include/cb_top.inc.php 
+
+/club/lib/club.lib.php 
+
+
+
+- 디자인 리뉴얼 
+그냥 맘편히 다 엎으세요. ㅎㅎ 
+
+- 클럽상단 이미지 높이를 설정하게 하기 
+/club/admin/admin_config.php 
+/club/admin/admin_config.update.php 
+/club/cm_design.php 
+
+- 클럽 메인 html에 html 편집기를 붙이는 경우를 위해서 설정추가 
+/club/admin/admin_config.php 
+/club/admin/admin_config.update.php 
+
+- 매니져가 회원 목록 수정할 때 페이징이 이상한거 
+/club/club_main.php 
+/club/cm_member_list.php 
+/club/cm_member_list.update.php 
+
+- 클럽생성시 cb_id 자릿수 오류 (20->17) 
+/club/cb_open.php 
+
+- 비밀글 사용여부를 최고관리자가 선택하게 하기 (기본으로는 사용불가) 
+/club/admin/admin_club_list.php 
+/club/admin/admin_club_list.update.php 
+
+- 클럽타이틀 없음 선택하면 link만 보이게 
+/club/include/cb_top.inc.php 
+
+- 비회원 상태에서 클럽가입 누를 때의 오류 
+/club/cb_mb_join.php 
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=1551 
+
+- club_list 함수오류 수정(승인클럽이 목록에 안나오던거...) 
+/club/lib/club.lib.php 
+
+- 승인클럽 회원가입시 레벨 
+/club/cb_mb_join.update.php 
+/club/include/cb_top.inc.php 
+/club/lib/club.lib.php 
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=1555 
+
+- 전체회원관리 오류수정 
+/club/cm_member_list.php 
+
+- club_list 함수 오류 수정 
+/club/lib/club.lib.php 
+
+- club_list 함수에서 cc_name(클럽카테고리 이름) 가지고 오게 하기 
+/club/lib/club.lib.php
+
+
+
+2.2.2 pl4 (march. 10. 2010)
+
+우측상단의 최신클럽 include를 함수로 
+메인에서의 클럽목록과 같은 것으로 변경했습니다. 
+
+클럽 메인에서의 클럽목록 함수 사용법이 변경 되었습니다. 
+http://sir.co.kr/bbs/board.php?bo_table=g4_pi_club2&wr_id=1365 
+
+<?=club_list( rand, 0, default, 10, 40, 랜덤이야);?> 
+<?=club_list( new, 0, default, 10,40, 새로운 클럽이랑께);?> 
+
+rand, new, suggest, point, member, my의 6가지 type이 있습니다. 
+----- 
+
+/club/club_index.inc.php 
+/club/tail.php 
+
+/club/include/cb_top.inc.php 
+
+/club/lib/club.lib.php 
+
+/skin/board/club/list.skin.php 
+/skin/board/club/view.skin.php 
+
+
+(삭제파일) 
+/club/include/cb_new.inc.php 
+
+
+
+- 클럽매니져 게시글목록에 나오는 관리자메뉴를 보이지 않게(선택이동/삭제/복사) 
+/skin/board/club/list.skin.php 
+/skin/board/club/view.skin.php 
+
+- 클럽목록 함수 추가 
+/club/club_index.inc.php 
+/club/tail.php 
+/club/lib/club.lib.php 
+
+(삭제) /club/include/cb_new.inc.php 
+
+- 클럽가입 회원가입중지인데, 회원가입 메뉴가 노출되는거 
+/club/include/cb_top.inc.php 
+
+- 클럽메인의 최신글에서 권한이 없는 글 제목이 보이는 것 
+/club/lib/club.lib.php
+
+
+2.2.2 pl3 (march. 09. 2010)
+
+/club/_error.php
+/club/cb_open.php
+/club/cb_open.update.php
+/club/cm_default.php
+/club/club_id_check.php
+
+/club/admin/club_admin.php
+
+/club/include/cb_club_top.inc.php
+/club/include/cb_top.inc.php
+
+/club/lib/club.lib.php
+
+/skin/board/club/_common.php
+/skin/board/club/download.skin.php
+/skin/board/club/list.skin.php
+/skin/board/club/view.skin.php
+/skin/board/club/write.skin.php
+
+
+
+- 클럽등록시 중복이름 확인 문제
+/club/cb_open.php
+/club/cb_open.update.php
+/club/club_id_check.php
+
+- 상단의 홈(Home)을 사이트 이름으로.
+/club/admin/club_admin.php
+/club/include/cb_club_top.inc.php
+
+- 다운로드 오류
+/skin/board/club/download.skin.php
+
+- 회원가입시 나오는 message 오류
+/club/_error.php
+
+- 클럽인기글 갯수 오류 수정
+/club/lib/club.lib.php
+
+- 글수정 화면에서 관리자는 $sca 목록을 볼 수 있게 하기 (분류 수정이 가능하게)
+/skin/board/club/write.skin.php
+
+- $sca가 없는 글 볼 수 없는 오류
+/skin/board/club/_common.php
+
+- 글보기에서 글쓰기 버튼 가능하지 않게 하기
+/skin/board/club/view.skin.php
+
+- 폐쇄 클럽의 상태는 최고관리자만 변경할 수 있게 하기
+/club/cm_default.php
+
+- 폐쇄 클럽에는 더이상 글을 올릴 수 없게 하기
+/skin/board/club/list.skin.php
+/skin/board/club/view.skin.php
+/skin/board/club/write.skin.php
+
+- cb_가 외부에 노출되는거
+/club/include/cb_top.inc.php
+
+
+2.2.2 pl2 (march. 08. 2010)
+
+/club/cb_list.php 
+/club/cb_open.update.php 
+/club/club_id_check.php 
+/club/cm_design.php 
+/club/common.php 
+
+/club/bbs/search.php 
+
+/club/include/cb_new.inc.php 
+/club/include/cb_top.inc.php 
+
+/club/lib/club.lib.php 
+
+/club/skin_main/latest/default/latest.skin.php 
+/club/skin_main/club_list/default/latest.skin.php 
+
+
+- 가입시 안내 멘트 
+/club/cb_mb_join_update.php 
+
+- 클럽 상단 이미지 크기 안내 
+/club/cm_design.php 
+
+- 클럽이름에서 cb_ 빼기 (꽁수로 기존 클럽과의 호환을 유지) 
+/club/cb_list.php 
+/club/cb_open.update.php 
+/club/club_id_check.php 
+/club/common.php 
+/club/include/cb_new.inc.php 
+/club/include/cb_top.inc.php 
+/club/lib/club.lib.php 
+/club/skin_main/latest/default/latest.skin.php 
+/club/skin_main/club_list/default/latest.skin.php 
+
+- 프로그램 오류수정 
+/club/bbs/search.php 
+/club/include/cb_top.inc.php
+
+
+2.2.2 pl1 (match. 04. 2010)
+
+/club/.htaccess 
+/club/cb_list.php 
+/club/club_index.inc.php 
+/club/club_main.php 
+/club/club_main.head.php 
+/club/club_main.tail.php 
+/club/club_url.php 
+/club/cm_club_transfer.update.php 
+/club/cm_member_level.php 
+/club/cm_member_level.update.php 
+
+/club/bbs/login.php 
+
+/club/include/cb_club_top.inc.php 
+/club/include/cb_defaultmenu.inc.php 
+/club/include/cb_top.inc.php 
+
+/club/club.lib.php 
+
+
+- 클럽 메인에 클럽검색 추가 
+/club/cb_list.php 
+/club/club_index.inc.php 
+
+- 경로 오류 수정 
+/club/include/cb_defaultmenu.inc.php 
+/club/include/cb_club_top.inc.php 
+/club/club.lib.php 
+
+- 클럽 로그인 
+/club/bbs/login.php 
+/club/include/cb_top.inc.php 
+
+- club_main.php를 head, tail로 분리 (기타 편의를 위해서) 
+/club/club_main.php 
+/club/club_main.head.php 
+/club/club_main.tail.php 
+
+- 클럽경로 줄이기 
+/club/.htaccess 
+/club/club_url.php 
+
+- 클럽 권한 수정을 31-99까지만 가능하게 
+/club/cm_member_level.php 
+/club/cm_member_level.update.php 
+
+- 클럽양도후 전 클럽매니져의 권한 재조정 (일반 회원으로) 
+/club/cm_club_transfer.update.php
+
+
+2.2.2 (march. 02. 2010)
+
+db 변경이 있으므로, 
+수정된 파일들을 ftp로 업로드 한 다음에 
+클럽관리자에서 업그레이드 버튼을 한번 눌러줘야 합니다. 
+
+그동안 요청이 있었거나 불편하다 생각된 부분을 수정하였으며 
+이후에는 아주 가끔씩 버그 패치만 할 수도 있습니다. 
+
+ALTER TABLE `nc_club` ADD `cb_tail_textarea` TEXT NOT NULL AFTER `cb_left_textarea` ; 
+ALTER TABLE `nc_club` ADD `cb_join_sex` varchar(255) NOT NULL default '' AFTER `cb_join_level` ; 
+ALTER TABLE `nc_club` ADD `cb_connect_view` TINYINT( 4 ) NOT NULL AFTER `cb_connect_skin` ; 
+ALTER TABLE `nc_club` ADD `cb_left_textarea` TEXT NOT NULL AFTER `cb_last_update_datetime` ; 
+ALTER TABLE `nc_config` ADD `nf_maintext` TEXT NOT NULL AFTER `nf_menu_list` ; 
+ALTER TABLE `nc_config` ADD `nf_search_default_skin` VARCHAR( 255 ) NOT NULL AFTER `nf_connect_default_skin` ; 
+
+--- 
+
+club/HISTORY_CLUB 
+club/club_index.inc.php 
+club/club_main.php 
+club/cm_default.php 
+club/cm_default.update.php 
+/club/cm_design.php 
+club/cb_mb_join.php 
+club/cm_join.php 
+club/cm_join.update.php 
+
+club/admin/admin_config_form.php 
+club/admin/admin_config_form.update.php 
+club/admin/club_admin.php 
+club/admin/admin_upgrade.php 
+
+club/include/cb_bottom.inc.php 
+club/include/cb_top.inc.php 
+
+club/install/sql_club.sql 
+
+club/main_skin/club_list/default/* 
+
+club/skin/search/default/* 
+
+
+- 사용자가 클럽대문 이미지 첨부시 클럽제목/url 안나오게 
+club/cm_design.php 
+club/include/cb_top.inc.php 
+
+- 클럽별 tail 설정을 할 수 있게 
+club/cm_default.php 
+club/cm_default.update.php 
+club/include/cb_bottom.inc.php 
+
+- 클럽관리자의 iframe code 수정 
+club/admin/club_admin.php 
+
+- 클럽목록을 위한 스킨 
+club/main_skin/club_list/default/* 
+
+- 클럽을 위한 search 스킨 
+club/admin/admin_config_form.php 
+club/admin/admin_config_form.update.php 
+club/skin/search/default/* 
+
+- 클럽 메인 편집기 (클럽 메인도 db에서 심플하게 만들어 봅시다) 
+club/club_index.inc.php 
+club/admin/admin_config_form.php 
+club/admin/admin_config_form.update.php 
+
+- 좌측 메뉴밑에 사용자 code(google 광고 등) 넣을 수 있는 공간 설정 
+club/club_main.php 
+club/cm_default.php 
+club/cm_default.update.php 
+
+- 현재접속자를 on/off 설정하기 (굳이 원치 않는 경우도 있슴) 
+club/club_main.php 
+club/cm_default.php 
+club/cm_default.update.php 
+
+- 클럽 가입조건에 성별구분 (상관없슴. 아빠/삼촌. 엄마/이모)를 추가 
+club/cb_mb_join.php 
+club/cm_join.php 
+club/cm_join.update.php
+
+
+2.2.1 pl1 (feb.26.2010)
+
+2.2.1 릴리즈 이후 요청사항 몇가지중 db 변경이 필요없는 것만 손 봤습니다. 
+db 업데이트는 없으면, 수정 파일만 바꾸면 됩니다. 
+
+--- 
+
+club/HISTORY_CLUB
+club/cb_main.php 
+club/cb_mb_join.php 
+club/cb_open.update.php 
+
+club/admin/club_admin.php
+club/admin/admin_club_history.php
+
+club/include/cb_leftmenu.inc.php 
+
+club/lib/club.lib.php 
+
+
+- 클럽 history메뉴를 관리자에 추가
+club/HISTORY_CLUB
+club/admin/club_admin.php
+club/admin/admin_club_history.php
+
+- 최신글 skin의 기본을 무조건 default로 설정 
+club/cb_open.update.php 
+
+- 기본함수를 lib으로 분리 
+club/cb_main.php 
+club/lib/club.lib.php 
+
+- 클럽 메뉴를 클릭하면, title bar도 같이 바꿔주기 
+club/include/cb_leftmenu.inc.php 
+club/lib/club.lib.php 
+
+- 폐쇄 클럽에 회원 가입 가능한 오류 
+club/cb_mb_join.php
+
+
+2.2.1 (feb.25.2010)
+
+이번에도 수정이 좀 많습니다. 
+디자인이 없으신 경우에는 그냥 싹~ 업로드 하셔도 됩니다. ㅎㅎ 
+
+2.2.1 버젼은 db가 변경 되며, 마무리 버젼 입니다. 
+db가 업글 되었으므로 반드시, 업그레이드 메뉴를 눌러야 합니다. 
+
+ALTER TABLE `nc_menu` ADD `cn_datetime` DATETIME NOT NULL AFTER `cn_idx` ; 
+ALTER TABLE `nc_config` ADD `nf_open_level` TEXT NOT NULL AFTER `nf_opentype` ; 
+ALTER TABLE `nc_config` ADD `nf_filter` MEDIUMTEXT NOT NULL AFTER `nf_connect_default_skin` 
+
+
+-- 
+
+club/club.config.php 
+club/club_id_check.php 
+club/club_main.php 
+club/cb_my_info.php 
+club/cb_open.php 
+club/cm_club_transfer.php 
+club/cm_club_transfer.update.php 
+club/cm_default.php 
+club/cm_member_list.php 
+
+club/admin/admin_club_form.php 
+club/admin/admin_club_form_update.php 
+club/admin/admin_config_form.php 
+club/admin/admin_config_form.update.php 
+club/admin/admin_upgrade.php 
+
+club/images/icon_new.gif 
+
+club/include/cb_clubmenu.inc.php 
+club/include/club_leftmenu.inc.php 
+
+club/install/sql_club.sql 
+
+club/lib/club.lib.php 
+
+club/skin/outlogin/default/outlogin.skin.2.php 
+club/skin_main/latest/default/latest.skin.php 
+
+skin/board/club/delete.skin.php 
+skin/board/club/delete_all.skin.php 
+skin/board/club/delete_comment.skin.php 
+skin/board/club/download.skin.php 
+skin/board/club/view.skin.php 
+skin/board/club/write_update.skin.php 
+skin/board/club/write_update_comment.skin.php 
+
+
+- 중복클럽명 오류 
+club/club_id_check.php 
+club/lib/club.lib.php 
+
+- 메뉴별 최근 업데이트 일자 추가 
+club/images/icon_new.gif 
+club/lib/club.lib.php 
+skin/board/club/write_update.skin.php 
+skin/board/club/write_update_comment.skin.php 
+
+- 클럽 제목, 키워드에 금지어 지정 
+club/cb_open.php 
+club/cm_default.php 
+club/admin/admin_config_form.php 
+club/admin/admin_config_form.update.php 
+
+- 클럽개설 가능 회원 레벨 
+club/cb_open.php 
+club/admin/admin_config_form.php 
+club/admin/admin_config_form.update.php 
+club/include/cb_clubmenu.inc.php 
+
+- 아웃로그인.최신글 타이틀 테이블 갈라짐 
+club/skin/outlogin/default/outlogin.skin.2.php 
+club/skin_main/latest/default/latest.skin.php 
+
+- 클럽 공지가 역순으로 나오는 오류 
+club/lib/club.lib.php 
+
+- 클럽 관리자에서 회원 클럽포인트 볼 수 있게 
+club/cm_member_list.php 
+
+- 개인별 클럽 활동 포인트 
+skin/board/club/delete.skin.php 
+skin/board/club/delete_comment.skin.php 
+skin/board/club/download.skin.php 
+skin/board/club/view.skin.php 
+skin/board/club/write_update.skin.php 
+skin/board/club/write_update_comment.skin.php 
+
+- 클럽경로 (선택 메뉴를 굵게 하기) 
+club/include/club_leftmenu.inc.php 
+
+- 클럽 폐쇄시 접근 제한 
+club/club_main.php 
+
+- 클럽포인트 수정 및 부여 
+club/admin/admin_club_form.php 
+club/admin/admin_club_form_update.php 
+
+- 클럽 url 오류 수정 
+club/club.config.php 
+
+- 클럽양도 
+club/include/club_managermenu.inc.php 
+club/lib/club.lib.php 
+club/cm_club_transfer.php 
+club/cm_club_transfer.update.php 
+
+- 클럽 권한오류 
+club/lib/club.lib.php 
+
+- 스킨이 없을 때 생기는 include 오류 수정 
+skin/board/club/delete_all.skin.php 
+skin/board/club/download.skin.php 
+skin/board/club/write_update.skin.php 
+skin/board/club/write_update_comment.skin.php 
+
+- 글삭제시 인기도 레벨 조정 
+skin/board/club/delete.skin.php 
+skin/board/club/delete_comment.skin.php 
+
+- 클럽 회원정보 
+club/club_main.php 
+club/cb_my_info.php
+
+
+2.2.0 (feb.18.2010)
+- 클럽2 2.2.0 첫번째 release
+
+g4 2.1.4 rc39 Release (march.07.2008)
+- 아빠불당의 2.1.4 마지막 release
+
+g4(4.05.01) 연동 ncclub 2.1.3 release (09.12.2005)
+- 나라오름님의 마지막 release

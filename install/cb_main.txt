@@ -1,0 +1,47 @@
+<table width=100% border=0 cellspacing=0 cellpadding=0> 
+<tr>
+<td colspan=2><img src=images/default_image.jpg></td>
+</tr>
+<tr>
+<td colspan=2 height=10></td>
+</tr>
+<tr>
+<td colspan=2><?=cb_search(0);?> </td>
+</tr>
+<tr>
+<td colspan=2 height=2></td>
+</tr>
+<tr>
+<td colspan=2><?=cb_club_search(0);?></td>
+</tr>
+<tr>
+<td colspan=2 height=12></td>
+</tr>
+<tr> 
+<td colspan=2 valign=top><?=replace_cb_latest(cb_clubhouse,story,커버스토리,2,40);?></td>
+</tr> 
+<tr>
+<td width=50% valign=top><?=club_list(suggest, 0, cb_rank, 10, 40, 추천);?></td>
+<td width=50% valign=top><?=club_list(new, 0, cb_rank, 10, 40, 신규);?></td> 
+</tr> 
+<tr>
+<td colspan=2 height=10></td>
+</tr>
+<tr>
+<td width=50% valign=top><?=club_list(member, 0, cb_rank, 5, 40, 회원수);?></td>
+<td width=50% valign=top><?=club_list(point, 0, cb_rank, 5, 40, 포인트);?></td> 
+</tr> 
+<tr>
+<td colspan=2 height=10></td>
+</tr>
+<tr>
+<td width=50% valign=top><?=club_list(update, 0, cb_rank, 5, 40, 요즘뜨는);?></td>
+<td width=50% valign=top><?=club_list(rand, 0, cb_rank, 5, 40, 랜덤);?></td> 
+</tr>
+<tr>
+<td colspan=2 height=10></td>
+</tr>
+<tr> 
+<td colspan=2 valign=top><?=replace_cb_latest(cb_clubhouse,link,클럽홍보하기,5,60);?></td>
+</tr>
+</table>
