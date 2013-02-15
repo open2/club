@@ -493,22 +493,22 @@ function SaveClubMenu()
 				return;
 			}
 
-			append_text+="<input type=hidden name=cn_id[] value=`"+m[idx].cn_id+"`>";
-			append_text+="<input type=hidden name=cn_name[] value=`"+m[idx].cn_name+"`>";
-			append_text+="<input type=hidden name=cn_type[] value=`"+m[idx].cn_type+"`>";
-			append_text+="<input type=hidden name=cn_url[] value=`"+m[idx].cn_url+"`>";
-			append_text+="<input type=hidden name=tmp_name[] value=`"+m[idx].tmp_name+"`>";
+			append_text+="<input type=hidden name=cn_id[] value='"+m[idx].cn_id+"'>";
+			append_text+="<input type=hidden name=cn_name[] value='"+m[idx].cn_name+"'>";
+			append_text+="<input type=hidden name=cn_type[] value='"+m[idx].cn_type+"'>";
+			append_text+="<input type=hidden name=cn_url[] value='"+m[idx].cn_url+"'>";
+			append_text+="<input type=hidden name=tmp_name[] value='"+m[idx].tmp_name+"'>";
 
 		}
 
 		for(var i=0;i<mObjCnt ;i++){
 			if( m[i].cn_id &&  m[i].cn_type =='X' )
 			{
-				append_text+="<input type=hidden name=cn_id[] value=`"+m[i].cn_id+"`>";
-				append_text+="<input type=hidden name=cn_name[] value=`"+m[i].cn_name+"`>";
-				append_text+="<input type=hidden name=cn_type[] value=`"+m[i].cn_type+"`>";
-				append_text+="<input type=hidden name=cn_url[] value=`"+m[i].cn_url+"`>";
-			  append_text+="<input type=hidden name=tmp_name[] value=`"+m[idx].tmp_name+"`>";
+				append_text+="<input type=hidden name=cn_id[] value='"+m[i].cn_id+"'>";
+				append_text+="<input type=hidden name=cn_name[] value='"+m[i].cn_name+"'>";
+				append_text+="<input type=hidden name=cn_type[] value='"+m[i].cn_type+"'>";
+				append_text+="<input type=hidden name=cn_url[] value='"+m[i].cn_url+"'>";
+			  append_text+="<input type=hidden name=tmp_name[] value='"+m[idx].tmp_name+"'>";
 			}
 		}
 	}
@@ -524,11 +524,11 @@ function SaveClubMenu()
 				return;
 			}
 
-			append_text+="<input type=hidden name=cn_id[] value=`"+m[idx].cn_id+"`>";
-			append_text+="<input type=hidden name=cn_name[] value=`"+m[idx].cn_name+"`>";
-			append_text+="<input type=hidden name=cn_type[] value=`"+m[idx].cn_type+"`>";
-			append_text+="<input type=hidden name=cn_url[] value=`"+m[idx].cn_url+"`>";
-			append_text+="<input type=hidden name=tmp_name[] value=`"+m[idx].tmp_name+"`>";
+			append_text+="<input type=hidden name=cn_id[] value='"+m[idx].cn_id+"'>";
+			append_text+="<input type=hidden name=cn_name[] value='"+m[idx].cn_name+"'>";
+			append_text+="<input type=hidden name=cn_type[] value='"+m[idx].cn_type+"'>";
+			append_text+="<input type=hidden name=cn_url[] value='"+m[idx].cn_url+"'>";
+			append_text+="<input type=hidden name=tmp_name[] value='"+m[idx].tmp_name+"'>";
 
 		}
 	}
